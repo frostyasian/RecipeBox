@@ -26,6 +26,9 @@ You will be prompted with a home screen that welcomes you. If you click on the t
 ## Login
 
 ![](assets/images/login.png)
+
+###
+
 Here you are prompted to either login/ sign up but you can also just try out as a guest. However with the guest, if you log out you ill loss all your saved recipes. With your own account, you can save all the recipes and it will remain inside as long as until you delete the recipes.
 
 ## Search
@@ -41,9 +44,13 @@ Within those search results, you can click on anyone and it will give you an opt
 ## Recipe Box
 
 ![](assets/images/recipe-box.png)
+
+###
+
 This is the box that you have all your saved recipes. You can add more categories and even delete them if you are done with them.
 
-##
-
 ![](assets/images/recipe-box-save.png)
+
+###
+
 This is just showing you the saved recipe inside your box.
