@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <!-- Firebase Auth CDN -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+    <!-- Firebase Real-Time Database CDN-->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+    <!-- JQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Edamam Arrtibution CDN -->
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <!-- Twitter Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+    <!-- local stylesheets -->
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/recipe-box.css" />
+    <link rel="stylesheet" href="assets/css/results.css" />
+    <link rel="stylesheet" href="assets/css/modals.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+    <title>Recipe Box</title>
+    <!--  -->
+  </head>
+  <body>
+    <div id="container">
+      <div class="navbar">
+
+        <div class="brand">
+          <img src="assets/images/recipe box 32x32.png" alt="icon">
+          <!-- <img src="assets/images/logoname.png" alt="name"> -->
+          <a href="./index.html"><img src="assets/images/logoname.png" alt="name"></a>
+        </div>
+        <div class="gap1"></div>
+       
+        <div class="gap2"></div>
+
+        <div class="user-stuff">
+          <div id="user-data">
+            <span id="box-click">Welcome</span>
+            
+            
+          </div>
+        </div>
+      </div>
+      <div class="tray">
+        <div class="results">
+
+          <!-- this div will empty out -->
+          <header id="showcase">
+            Welcome to Recipe Box
+            
+          </header>
+      
+          <div id="headerContent" class="headerContainer">
+            <span id="line">Our team has brought together an applicataion we like to call Recipe Box.</span>
+            <span id="line">You can search, store and manipulate your favorite recipes.</span>
+            <span id="line">Explore and have fun. Come check it out!</span>
+            <span id="line">
+              <div class="search-bar">
+              <input id="recipe-search" type="text" placeholder="'eggplant parmesaen'" />
+              <img src="assets/images/search-icon.png" class="icon" id="search-icon" alt="search icon" />
+            </div>
+            </span>
+          </div>
+
+          
+
+        </div>
+        <div id="box-gap"></div>
+        <div id="box" data-showing="0"></div>
+      </div>
+    </div>
+    <footer>
+      <div id="edamam-badge" data-color="white"></div>     
+    </footer>
+      
+    <div id="storage">
+      
+      <!-- recipe display modal -->
+      <div id="recipe-display-modal" >
+          <div class="modal-gap"></div>
+          <img id="recipe-modal-image" class="recipe-card-big" src="" alt="recipe image" />
+          <div class="right">
+            <div class="top-bar">
+                <div id="fix">
+                    <div  id="card-tab-select" data-state="0" value="0">
+                        <span id="card-tab-label">save to...</span>
+                        
+                      </div>
+                </div>
+                <div id="recipe-display-button-group">
+                  <button id="save-recipe-button">save</button>
+                  <button id="delete-recipe-button" disabled>delete</button>
+                  <img id="card-tab-cancel-icon" class="icon" src="assets/images/cancel-icon-white.png" />
+                </div>
+                
+            </div>
+            <h3 id="recipe-modal-title">Some Recipe Title</h3>
+            <h4><span id="recipe-modal-time">7 hours 30 minutes</span></h3>
+            <div class="columns">
+              <ul id="recipe-modal-ingredients">
+                <li>1 chicken, about 3.5 to 4 pounds</li>
+                <li>1 lemon</li>
+                <li>1 blood orange</li>
+                <li>1 tangerine or clementine</li>
+                <li>Kosher salt</li>
+                <li>1/2 cup chicken broth</li>
+              </ul>
+            </div>
+            <a id ="recipe-modal-link" href="#" target="_blank">food52.com - citrus-roasted-chicken</a>
+          </div>
+          <div class="modal-gap"></div>
+        </div>
+      <!-- The Sign-up Modal -->
+      <div id="auth-modal-up">
+        <h3 id="modal-message">sign up</h3>
+        <div id="auth-alert-up" class="hidden alert ">Some Alert Message</div>
+        <div class="modal-label">name</div>
+        <input type="text" id="sign-up-name" class="modal-input" placeholder="arya stark" required/>
+        <div class="modal-label">email address</div>
+        <input type="email" id="sign-up-email" class="modal-input" placeholder="arya.stark@winterfell.com" />
+        <div class="modal-label">password</div>
+        <input type="password" id="sign-up-password" class="modal-input" />
+        <input type="submit" id="sign-up" value="sign up" />
+        <div id="alt-links">
+          <div class="alt-link" id="swap-auth-in">sign in</div>
+          <div class="alt-link" id="guest-auth-in">try it out</div>
+        </div>
+      </div>
+      <!-- The sign-in Modal -->
+      <div id="auth-modal-in">
+        <h3 id="modal-message">sign in</h3>
+        <div id="auth-alert-in" class="hidden alert ">Some Alert Message</div>
+        <div class="modal-label">email address</div>
+        <input type="email" id="sign-in-email" class="modal-input" placeholder="arya.stark@winterfell.com" />
+        <div class="modal-label">password</div>
+        <input type="password" id="sign-in-password" class="modal-input" />
+        <input type="submit" id="sign-in" value="sign in" />
+        <div id="alt-links">
+          <div class="alt-link" id="swap-auth-up">sign up</div>
+          <div class="alt-link" id="guest-auth-up">try it out</div>
+        </div>
+      </div>
+      <!-- Recipe Box Modal -->
+      <div id="recipe-box">
+        <div class="header">
+          <div class="tab" id="tab-select" data-state="0" value="0">
+            <span id="tab-label"></span>
+            
+          </div>
+          <div class="tab" id="add-custom-tab">
+            <div id="tab-plus-icon">+</div>
+            <div id="custom-tab-dialogue" data-state="0">
+              <input id="custom-tab-input" type="text" />
+              <img id="tab-okay-icon" class="icon" src="assets/images/ok-icon.png" alt="okay icon">
+              <img id="tab-cancel-icon" class="icon" src="assets/images/cancel-icon.png" alt="cancel icon" >
+              <div id="tab-delete-dialogue">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div id="content"></div>
+      </div>
+    </div>
+    <!-- Local Scripts -->
+    <script src="assets/javascript/firebase-config.js"></script>
+    <script src="assets/javascript/search.js"></script>
+    <script src="assets/javascript/auth.js"></script>
+    <script src="assets/javascript/data.js"></script>
+    <script src="assets/javascript/logic.js"></script>
+    <script src="assets/javascript/events.js"></script>
+  </body>
+
+  
+</html>

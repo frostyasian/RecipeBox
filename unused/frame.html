@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/frame.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div id="brand">BRAND</div>
+        <div id="search">Find Recipes: <input type="text" id="search-input" /> <button id="search-button">search</button></div>
+        <div id="menu">
+          <div id="profile-options" class="nav">Manage Your Account</div>
+          <div id="calendar-link" class="nav">Calendar</div>
+          <div id="recipe-box-link" class="nav">Recipe Box</div>
+        </div>
+      </div>
+      <div id="display">
+        <div id="title">Your results: <span id="search-term"></span></div>
+        <div id="results"></div>
+      </div>
+    </div>
+    <script src="assets/javascript/search.js"></script>
+  </body>
+</html>

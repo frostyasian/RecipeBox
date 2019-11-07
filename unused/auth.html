@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <!-- Firebase Auth CDN -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+    <!-- Firebase Real-Time Database CDN-->
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+    <!-- JQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- local stylesheet -->
+    <link rel="stylesheet" href="assets/css/frame.css" />
+    <title>Recipe Box</title>
+  </head>
+  <body>
+    <div class="panel">
+      <div id="sign-up">
+        <h3>Sign Up Form</h3>
+        <!-- this basic form has no validation -->
+        name <input id="sign-up-name" type="text" /><br />
+        email <input id="sign-up-email" type="text" /><br />
+        password <input id="sign-up-password" type="text" /><br />
+        <button id="sign-up-button">Sign up</button>
+      </div>
+      <div id="sign-in">
+        <h3>Sign In Form</h3>
+        <!-- this basic form has no validation -->
+        email <input id="sign-in-email" type="text" /><br />
+        password <input id="sign-in-password" type="text" /><br />
+        <button id="sign-in-button">Sign in</button>
+        <a href="#" id="logout">log out</a>
+        <a href="#" id="anonymous-login">sign in anonymously</a>
+      </div>
+      <div id="update-user-info">
+        <h3>Update Profile Form</h3>
+        <!-- this basic form has no validation -->
+        name <input id="update-name" type="text" /><br />
+        email <input id="update-email" type="text" /><br />
+        password <input id="update-password" type="text" /><br />
+        <button id="update-button">Update</button>
+      </div>
+      <div id="user-info">
+        <h3>User Info</h3>
+        name: <span id="user-info-name"></span> <br />
+        email: <span id="user-info-email"></span> <br />
+        displayName: <span id="user-info-displayName"></span> <br />
+        isAnonymous: <span id="user-info-isAnonymous"></span> <br />
+        uid: <span id="user-info-uid"></span> <br />
+        storedDataKeys: <span id="user-info-storedDataKeys"></span> <br />
+        storedData: <span id="user-info-storedData"></span> <br />
+      </div>
+      <div id="search">Find Recipes: <input type="text" id="search-input" /> <button id="search-button">search</button></div>
+    </div>
+    <!-- A link to the firebase-config file. DO NOT USE THE INFORMATION IN THIS FILE FOR TESTING
+    please use the steps outlined in the google doc for setting up an app with firebase auth and firebase
+    real time database -->
+    <script src="assets/javascript/firebase-config.js"></script>
+    <script src="assets/javascript/auth.js"></script>
+    <script src="assets/javascript/data.js"></script>
+  </body>
+</html>

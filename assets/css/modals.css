@@ -1,0 +1,118 @@
+#recipe-display-modal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #edf5e1;
+  padding: 5px;
+  font-size: 14px;
+  width: 100%;
+  border-top: 2px solid #05386b;
+  border-bottom: 2px solid #05386b;
+  height: auto;
+  align-items: center;
+  background-color: #252525;
+  color: #edf5e1;
+}
+
+.columns {
+  column-count: 1;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pad-right {
+  margin-right: 10px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.recipe-card-big {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+.recipe-card-small {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+#card-tab-select {
+  overflow: hidden;
+  height: 24px;
+  line-height: 24px;
+  background-color: #8ee4af;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0 5px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 50;
+  color: #000000;
+}
+
+#fix {
+  position: relative;
+  width: 120px;
+  height: 26px;
+}
+
+#recipe-display-button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.card-tab-option:hover {
+  background-color: #05386b;
+  color: #edf5e1;
+}
+#save-recipe-button,
+#delete-recipe-button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #8ee4af;
+  border-radius: 5px;
+  border: 1px solid #05386b;
+  margin-right: 10px;
+  padding: 0 5px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+#card-tab-cancel-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal-gap {
+  flex: 1 1 auto;
+  background-color: #252525;
+  height: inherit;
+}
+
+#recipe-modal-link {
+  text-decoration: none;
+  color: #edf5e1;
+}
+
+#recipe-modal-link:hover {
+  color: #8ee4af;
+}

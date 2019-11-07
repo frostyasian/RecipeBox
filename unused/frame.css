@@ -1,0 +1,84 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #252525;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.nav {
+  padding: 0 10px;
+}
+
+#search-button {
+  margin-left: 5px;
+}
+
+/* chunk specific to auth.html */
+#sign-up,
+#sign-in,
+#update-user-info,
+#user-info {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid midnightblue;
+  background-color: darkkhaki;
+  color: #1f1f1f;
+}
+
+input {
+  display: inline-block;
+}
+
+button {
+  background-color: #1f1f1f;
+  color: darkkhaki;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.panel {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,136 @@
+/* This stylesheet handles components that exist on a global scale */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.tray {
+  width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 65px;
+}
+.navbar {
+  width: 100%;
+  height: 65px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #05386b;
+  position: fixed;
+  background-color: #88bdbc;
+  color: #fff;
+}
+
+.search-bar {
+  padding: 5px 10px 5px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #254e58;
+  width: max-content;
+}
+.search-bar:focus-within {
+  outline: none;
+  box-shadow: 0 0 5px 2px #254e58;
+  justify-self: center;
+}
+input,
+#recipe-search {
+  border: none;
+  font-size: 18px;
+  background-color: #fff;
+  color: #254e58;
+  font-family: inherit;
+}
+
+::placeholder {
+  color: #05386b;
+  opacity: 0.1;
+}
+#recipe-search:focus {
+  outline: none;
+}
+
+#search-icon {
+  cursor: pointer;
+}
+
+.brand {
+  justify-self: flex-start;
+}
+
+.user-stuff {
+  display: flex;
+  align-items: center;
+}
+
+.gap1,
+.gap2 {
+  flex: 1 0 auto;
+}
+
+#user-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#box {
+  position: fixed;
+  top: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: -10px;
+  width: 0;
+  height: calc(100vh - 65px);
+  transition: width, 0.5s;
+  background-color: #f09b95;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#box-click {
+  cursor: pointer;
+}
+
+#storage {
+  display: none;
+}
+
+.error-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #252525;
+  color: #edf5e1;
+  height: 100%;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
