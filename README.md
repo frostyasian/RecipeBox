@@ -18,23 +18,32 @@ Recipe Box is the recipe saver you've been missing. You can search your favoriti
 
 ## Screenshots
 
+## Home
+
 ![](assets/images/home.png)
 You will be prompted with a home screen that welcomes you. If you click on the top right of the screen you can login or sign up.
+
+## Login
+
 ![](assets/images/login.png)
-<br>
 Here you are prompted to either login/ sign up but you can also just try out as a guest. However with the guest, if you log out you ill loss all your saved recipes. With your own account, you can save all the recipes and it will remain inside as long as until you delete the recipes.
+
+## Search
+
 ![](assets/images/search.png)
-<br>
 Here is th e populated search that will appear after you search something.
+
+## Result
+
 ![](assets/images/result.png)
-<br>
 Within those search results, you can click on anyone and it will give you an option to save or delete. You also get the recipe for that specific recipe. If you click on it again it will prompt you to a third party website where the recipe is actually pulld from.
+
+## Recipe Box
+
 ![](assets/images/recipe-box.png)
-<br>
 This is the box that you have all your saved recipes. You can add more categories and even delete them if you are done with them.
+
+##
+
 ![](assets/images/recipe-box-save.png)
 This is just showing you the saved recipe inside your box.
-
-## Heroku
-
-https://recipe-box-unc-project1.herokuapp.com/
